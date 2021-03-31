@@ -1,16 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
 import { useGlobalContext } from './context';
 import { FaTimes } from 'react-icons/fa';
 import { social, links } from './data';
 
 const Sidebar = () => {
   const { isSidebarOpen, closeSidebar } = useGlobalContext();
+  const logo = "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png";
 
   return (
     <aside className={`${isSidebarOpen ? 'sidebar show-sidebar' : 'sidebar'}`}>
       <div className='sidebar-header'>
-        <img src={logo} className='logo' alt='coding addict' />
+        <img src={logo} className='logo' alt='Logo' />
         <button className='close-btn' onClick={closeSidebar}>
           <FaTimes />
         </button>
